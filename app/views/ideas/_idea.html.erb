@@ -3,15 +3,12 @@
     <strong>Name:</strong>
     <%= idea.name %>
   </p>
-
   <p>
     <strong>Description:</strong>
     <%= idea.description %>
   </p>
-
   <p>
     <strong>Picture:</strong>
-    <%= image_tag(idea.picture_url, :width => 600) if idea.picture.present? %>
+    <%= image_tag(idea.picture_url(:thumb), width: 150, height: 150, class: "img-thumbnail flex-shrink-0") if idea.picture? %>
   </p>
-
 </div>
